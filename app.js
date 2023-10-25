@@ -11,6 +11,11 @@ var gundamsRouter = require('./routes/gundams');
 
 
 var app = express();
+//so sanh text
+var hbs = require('hbs');
+hbs.registerHelper('equal', require('handlebars-helper-equal'))
+
+
 // cai dat body-parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
